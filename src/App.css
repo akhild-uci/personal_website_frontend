@@ -22,3 +22,34 @@
 {
     color: rgb(54, 156, 196);
 }
+
+.collapsible-skill
+{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.static-skill
+{
+    background-color: #eee;
+    color: #444;
+    cursor: initial;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .static-skill:hover, .collapsible-skill:hover
+{
+    background-color: #ccc;
+}
