@@ -4,22 +4,23 @@ import Subskills from './Subskills';
 
 class CollapsibleSkillItem extends Component {
     state = {
-        display: false
+        display: false,
     }
 
     getPanelStyle = () => {
         return {
             padding: "0 18px",
             backgroundColor: "white",
-            display: (this.state.display) ? "block" : "none",
             overflow: "hidden",
+            maxHeight: (this.state.display) ? "124px" : "0",
+            transition: "max-height 0.2s ease-out"
         }
     }
 
 
     handleClick = (e) => {
         e.preventDefault();
-        this.setState({ display: !this.state.display})
+        this.setState({ display: !this.state.display })
     }
 
     render() {
@@ -27,7 +28,7 @@ class CollapsibleSkillItem extends Component {
         return (
             <div>
                 <button 
-                    className="collapsible-skill"
+                    className={(this.state.display) ? "collapsible-skill active" : "collapsible-skill"}
                     onClick={this.handleClick}
                 >
                     {name}

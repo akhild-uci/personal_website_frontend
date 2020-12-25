@@ -4,7 +4,11 @@ import PropType from 'prop-types';
 class StaticSkillItem extends Component {
     render() {
         const { name } = this.props.skill;
-        return ( <div className="static-skill">{name}</div> )
+        return ( 
+            <div>
+                <div className="static-skill">{name}</div>
+            </div>
+        )
     }
 }
 

@@ -19,11 +19,11 @@ class Skills extends Component {
                         name: "Beautiful Soup"
                     },
                     {
-                        id: "12",
+                        id: "13",
                         name: "Flask"
                     },
                     {
-                        id: "13",
+                        id: "14",
                         name: "Pygame"
                     }
                 ]

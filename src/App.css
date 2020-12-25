@@ -36,6 +36,20 @@
     transition: 0.4s;
 }
 
+.collapsible-skill::after
+{
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible-skill.active::after
+{
+    content: "\2212";
+}
+
 .static-skill
 {
     background-color: #eee;
