@@ -1,29 +1,37 @@
 import React from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Home() {
     return (
-        <div id="home">
-            <h1>Akhil Dhanala</h1>
-            <br/>
-            <ul className="social">
-                <li>
-                    <a href="https://www.linkedin.com/in/akhil-dhanala/">
-                        <i className="fa fa-linkedin"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/akhild-uci">
-                        <i className="fa fa-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:akhil.dhanala@gmail.com">
-                        <i className="fa fa-envelope"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <Jumbotron id="home" fluid>
+            <Container>
+                <Row className="justify-content-md-center">
+                    <h1 style={{color: "#fff"}}>Akhil Dhanala</h1>
+                </Row>
+                <Row className="justify-content-md-center">
+                    <Col xs="auto" sm="auto" md="auto" lg="auto">
+                        <a href="https://www.linkedin.com/in/akhil-dhanala/">
+                            <i className="fa fa-linkedin"></i>
+                        </a>
+                    </Col>
+                    <Col xs="auto" sm="auto" md="auto" lg="auto">
+                        <a href="https://github.com/akhild-uci">
+                            <i className="fa fa-github"></i>
+                        </a>
+                    </Col>
+                    <Col xs="auto" sm="auto" md="auto" lg="auto">
+                        <a href="mailto:akhil.dhanala@gmail.com">
+                            <i className="fa fa-envelope"></i>
+                        </a>
+                    </Col>
+                </Row>
+            </Container>
+        </Jumbotron>
     )
 }
+
 
 export default Home;
