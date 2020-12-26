@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Accordion from 'react-bootstrap/Accordion';
 import CollapsibleSkillItem from './CollapsibleSkillItem';
 import StaticSkillItem from './StaticSkillItem';
 
@@ -93,14 +94,22 @@ class Skills extends Component {
         ]
     }
 
-    render() {
+    produceSkills = () => {
         return this.state.skills.map((skill) => {
             if (skill.isContainer) {
                 return (<CollapsibleSkillItem key={skill.id} skill={skill}/>)
             } else {
-                return (<StaticSkillItem key={skill.id} skill={skill}/>)
+                return (<StaticSkillItem key={skill.id} skill={skill.name}/>)
             }
         })
+    }
+
+    render() {
+        return (
+            <Accordion>
+                {this.produceSkills()}
+            </Accordion>
+        )
     }
 }
 

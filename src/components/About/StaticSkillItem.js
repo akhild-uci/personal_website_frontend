@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
+import Card from 'react-bootstrap/Card';
 
 class StaticSkillItem extends Component {
     render() {
-        const { name } = this.props.skill;
         return ( 
-            <div>
-                <div className="static-skill">{name}</div>
-            </div>
+            <Card>
+                <Card.Header>{this.props.skill}</Card.Header>
+            </Card>
         )
     }
 }
@@ -15,7 +15,7 @@ class StaticSkillItem extends Component {
 
 // PropTypes
 StaticSkillItem.propType = {
-    skill: PropType.object.isRequired,
+    skill: PropType.string.isRequired,
 }
 
 export default StaticSkillItem;

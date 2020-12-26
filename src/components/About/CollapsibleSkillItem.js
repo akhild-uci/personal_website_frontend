@@ -1,42 +1,22 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 import Subskills from './Subskills';
+import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
+
 
 class CollapsibleSkillItem extends Component {
-    state = {
-        display: false,
-    }
-
-    getPanelStyle = () => {
-        return {
-            padding: "0 18px",
-            backgroundColor: "white",
-            overflow: "hidden",
-            maxHeight: (this.state.display) ? "124px" : "0",
-            transition: "max-height 0.2s ease-out"
-        }
-    }
-
-
-    handleClick = (e) => {
-        e.preventDefault();
-        this.setState({ display: !this.state.display })
-    }
-
     render() {
         const { name, subskills } = this.props.skill;
         return (
-            <div>
-                <button 
-                    className={(this.state.display) ? "collapsible-skill active" : "collapsible-skill"}
-                    onClick={this.handleClick}
-                >
+            <Card>
+                <Accordion.Toggle as={Card.Header} eventKey={name}>
                     {name}
-                </button>
-                <div style={this.getPanelStyle()}>
+                </Accordion.Toggle>
+                <Accordion.Collapse eventKey={name}>
                     <Subskills subskills={subskills}/>
-                </div>
-            </div>
+                </Accordion.Collapse>
+            </Card>
         )
     }
 }
