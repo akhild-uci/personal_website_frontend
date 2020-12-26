@@ -7,24 +7,24 @@ import Col from 'react-bootstrap/Col';
 function Home() {
     return (
         <Jumbotron id="home" fluid>
-            <Container>
+            <Container className="home-content">
                 <Row className="justify-content-md-center">
-                    <h1 style={{color: "#fff"}}>Akhil Dhanala</h1>
+                    <h1 style={{color: "#fff", fontSize: "90px"}}>Akhil Dhanala</h1>
                 </Row>
                 <Row className="justify-content-md-center">
                     <Col xs="auto" sm="auto" md="auto" lg="auto">
                         <a href="https://www.linkedin.com/in/akhil-dhanala/">
-                            <i className="fa fa-linkedin"></i>
+                            <i className="fa fa-linkedin fa-2x"></i>
                         </a>
                     </Col>
                     <Col xs="auto" sm="auto" md="auto" lg="auto">
                         <a href="https://github.com/akhild-uci">
-                            <i className="fa fa-github"></i>
+                            <i className="fa fa-github fa-2x"></i>
                         </a>
                     </Col>
                     <Col xs="auto" sm="auto" md="auto" lg="auto">
                         <a href="mailto:akhil.dhanala@gmail.com">
-                            <i className="fa fa-envelope"></i>
+                            <i className="fa fa-envelope fa-2x"></i>
                         </a>
                     </Col>
                 </Row>

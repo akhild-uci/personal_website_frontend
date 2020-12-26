@@ -1,11 +1,36 @@
+html, body, #root, .App
+{
+    height: 100%;
+    width: 100%;
+}
+
+
 #home
 {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-image: url('./components/media/background.JPG');
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 
 #home i
 {
     color: #fff;
+}
+
+.home-content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
