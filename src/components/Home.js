@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 function Home() {
     return (
-        <Jumbotron id="home" fluid>
+        <Jumbotron id="home" fluid style={{marginBottom: "0"}}>
             <Container className="home-content">
                 <Row className="justify-content-md-center">
                     <h1 style={{color: "#fff", fontSize: "90px"}}>Akhil Dhanala</h1>
