@@ -1,14 +1,13 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 import home from './media/zotnseek_home_page.jpg';
 
 function Zotnseek() {
     return (
-        <div className="project-item" id="zotnseek">
-            <div>
-                <img src={home} alt="zotnseek"></img>
-            </div>
-            <p>ZotnSeek</p>
-        </div>
+        <Card id="zotnseek">
+            <Card.Img variant="top" src={home} alt="zotnseek"/>
+            <Card.Title style={{textAlign: "center"}}>ZotnSeek</Card.Title>
+        </Card>
     )
 }
 

@@ -20,9 +20,15 @@ html, body, #root, .App
 }
 
 
-#home i
+#home i { color: #fff; }
+
+#home i:hover
 {
-    color: #fff;
+    color: #11ABB0;
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
 }
 
 .home-content
@@ -34,3 +40,9 @@ html, body, #root, .App
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+
+#about
+{
+    background-color: black;
+}
+

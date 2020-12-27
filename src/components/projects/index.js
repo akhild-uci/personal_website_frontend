@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Zotnseek from './Zotnseek';
+import Antz from './Antz';
+import PersonalSite from './PersonalSite';
 
 
 class ProjectsPage extends Component {
     render() {
         return (
-            <div id="projects">
-                <h2>Projects</h2>
-                <div className="projects-container">
-                    <Zotnseek />
-                </div>
-            </div>
+            <Jumbotron id="projects" fluid style={{marginBottom: "0"}}>
+                <h2 style={{textAlign: "center"}}>Projects</h2>
+                <br/>
+                <Container>
+                    <Row>
+                        <CardDeck>
+                            <Zotnseek />
+                            <Antz />
+                            <PersonalSite />
+                        </CardDeck>
+                    </Row>
+                </Container>
+            </Jumbotron>
         )
     }
 }

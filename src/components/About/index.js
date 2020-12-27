@@ -10,10 +10,10 @@ import profilePic from '../media/profile_pic.jpg';
 
 function About() {
     return (
-        <Jumbotron id="about" fluid>
+        <Jumbotron id="about" fluid style={{marginBottom: "0"}}>
             <Container>
                 <Row className="justify-content-center">
-                    <h2>About Me</h2>
+                    <h2 style={{color: "white"}}>About Me</h2>
                 </Row>
                 <br/>
                 <Row>
@@ -22,7 +22,7 @@ function About() {
                     </Col>
                     <Col>
                         <div className="skills-container">
-                            <h3 style={{textAlign: "center"}}>Skills</h3>
+                            <h3 style={{textAlign: "center", color: "white"}}>Skills</h3>
                             <Skills />
                         </div>
                     </Col>
