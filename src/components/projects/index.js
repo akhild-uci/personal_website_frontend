@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropType from 'prop-types';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,21 +12,26 @@ import PersonalSite from './PersonalSite';
 class ProjectsPage extends Component {
     render() {
         return (
-            <Jumbotron id="projects" fluid style={{marginBottom: "0"}}>
+            <Jumbotron id="projects" fluid>
                 <h2 style={{textAlign: "center"}}>Projects</h2>
                 <br/>
                 <Container>
                     <Row>
                         <CardDeck>
-                            <Zotnseek />
-                            <Antz />
-                            <PersonalSite />
+                            <Zotnseek onClick={this.props.onClick}/>
+                            <Antz onClick={this.props.onClick}/>
+                            <PersonalSite onClick={this.props.onClick}/>
                         </CardDeck>
                     </Row>
                 </Container>
             </Jumbotron>
         )
     }
+}
+
+// PropTypes
+ProjectsPage.propType = {
+    onClick: PropType.func.isRequired,
 }
 
 

@@ -10,7 +10,7 @@ import profilePic from '../media/profile_pic.jpg';
 
 function About() {
     return (
-        <Jumbotron id="about" fluid style={{marginBottom: "0"}}>
+        <Jumbotron id="about" fluid>
             <Container>
                 <Row className="justify-content-center">
                     <h2 style={{color: "white"}}>About Me</h2>

@@ -6,16 +6,14 @@ class Navigation extends Component {
     render() {
         return (
             <Navbar bg="dark" variant="dark" fixed="top" className="justify-content-center">
-                <Nav.Link href="#home" style={navBarStyle}>Home</Nav.Link>
-                <Nav.Link href="#about" style={navBarStyle}>About</Nav.Link>
-                <Nav.Link href="#projects" style={navBarStyle}>Projects</Nav.Link>
-                <Nav.Link href="#contact" style={navBarStyle}>Contact</Nav.Link>
+                <Nav.Link href="#home" className="nav-link">Home</Nav.Link>
+                <Nav.Link href="#about" className="nav-link">About</Nav.Link>
+                <Nav.Link href="#projects" className="nav-link">Projects</Nav.Link>
+                <Nav.Link href="#contact" className="nav-link">Contact</Nav.Link>
             </Navbar>
         )
     }
 }
-
-const navBarStyle = { color: "#fff" }
 
 export default Navigation;
 
