@@ -29,6 +29,9 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
+            <a href="#about" className="down-button">
+                <i className="fa fa-chevron-circle-down fa-3x"></i>
+            </a>
         </Jumbotron>
     )
 }

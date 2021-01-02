@@ -1,4 +1,11 @@
-html, body, #root, .App
+html
+{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+body, #root, .App
 {
     height: 100%;
     width: 100%;
@@ -57,11 +64,26 @@ html, body, #root, .App
     transform: translateX(-50%) translateY(-50%);
 }
 
+.down-button
+{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 /* About */
 #about
 {
     background-color: black;
     margin-bottom: 0;
+}
+
+#about .accordion .collapsible:hover
+{
+    cursor: pointer;
 }
 
 /* Projects */
@@ -114,6 +136,11 @@ html, body, #root, .App
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+#contact .card-header {
+    border-radius: 0;
+    border-bottom: 0;
 }
 
 #contact .col { color: white; }
