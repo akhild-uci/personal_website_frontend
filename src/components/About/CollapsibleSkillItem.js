@@ -17,7 +17,7 @@ class CollapsibleSkillItem extends Component {
     render() {
         const { name, subskills } = this.props.skill;
         return (
-            <Card>
+            <Card className="collapsible">
                 <Accordion.Toggle as={Card.Header} eventKey={name} onClick={this.handleClick}>
                     {name}
                     <Badge variant="secondary" style={badgeStyle}>

@@ -12,16 +12,17 @@ body, #root, .App
 }
 
 /* Navigation */
-nav a 
+nav .white 
 { 
     color: white;
-    -webkit-transition: color .3s ease-in-out;
-    -moz-transition: color .3s ease-in-out;
-    -o-transition: color .3s ease-in-out;
-    transition: color .3s ease-in-out;
+    opacity: 1;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
-nav a:hover, nav .active
+nav .white:hover, nav .active
 {
     color: orange;
     -webkit-transition: color .3s ease-in-out;
@@ -30,13 +31,14 @@ nav a:hover, nav .active
     transition: color .3s ease-in-out;
 }
 
+
 nav .hide 
-{ 
-    color : transparent;
-    -webkit-transition: color .3s ease-in-out;
-    -moz-transition: color .3s ease-in-out;
-    -o-transition: color .3s ease-in-out;
-    transition: color .3s ease-in-out;
+{
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 /* Home */

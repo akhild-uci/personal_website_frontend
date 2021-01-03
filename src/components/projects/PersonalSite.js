@@ -20,7 +20,7 @@ class PersonalSite extends Component {
                         className="stretched-link text-decoration-none" 
                         onClick={this.handleClick}
                     >
-                        <i class="fa fa-plus fa-2x"></i>
+                        <i className="fa fa-plus fa-2x"></i>
                     </Button>
                 </Card.ImgOverlay>
                 <Card.Title style={{textAlign: "center"}}>Personal Website</Card.Title>
