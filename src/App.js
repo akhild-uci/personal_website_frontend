@@ -12,22 +12,27 @@ class App extends Component {
   state = {
     show: false,
     selectedProject: "poo",
+    activeSection: "home",
   }
 
   handleShow = project => {
-    this.setState({show : true, selectedProject : project}); 
+    this.setState({show : true, selectedProject : project});
   }
 
   handleClose = () => { this.setState({show : false}); }
 
+  handleWaypointEnter = activeSection => {
+    this.setState({activeSection : activeSection});
+  }
+
   render() {
     return (
       <div className="App">
-        <Navigation />
-        <Home />
-        <About />
-        <Projects onClick={this.handleShow}/>
-        <Contacts />
+        <Navigation active={this.state.activeSection}/>
+        <Home onEnter={this.handleWaypointEnter}/>
+        <About onEnter={this.handleWaypointEnter}/>
+        <Projects onEnter={this.handleWaypointEnter} onClick={this.handleShow}/>
+        <Contacts onEnter={this.handleWaypointEnter}/>
         <ProjectModal 
           show={this.state.show} 
           handleClose={this.handleClose}
