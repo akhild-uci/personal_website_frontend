@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropType from 'prop-types';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -24,6 +25,14 @@ class Navigation extends Component {
         }
     }
 
+    getClasses = anchor => {
+        if (anchor === this.props.active) {
+            return `${this.state.color} active`;
+        } else {
+            return this.state.color;
+        }
+    }
+
     render() {
         return (
             <Navbar
@@ -33,14 +42,21 @@ class Navigation extends Component {
                 className="justify-content-center"
                 style={{transition : "all .3s ease-in-out"}}
             >
-                <Nav.Link className={this.state.color} href="#home">Home</Nav.Link>
-                <Nav.Link className={this.state.color} href="#about">About</Nav.Link>
-                <Nav.Link className={this.state.color} href="#projects">Projects</Nav.Link>
-                <Nav.Link className={this.state.color} href="#contact">Contact</Nav.Link>
+                <Nav.Link className={this.getClasses('home')} href="#home">Home</Nav.Link>
+                <Nav.Link className={this.getClasses('about')} href="#about">About</Nav.Link>
+                <Nav.Link className={this.getClasses('projects')} href="#projects">Projects</Nav.Link>
+                <Nav.Link className={this.getClasses('contact')} href="#contact">Contact</Nav.Link>
             </Navbar>
         )
     }
 }
+
+
+// PropTypes
+Navigation.propType = {
+    active: PropType.string.isRequired,
+}
+
 
 export default Navigation;
 
